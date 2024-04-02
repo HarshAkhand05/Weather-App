@@ -11,7 +11,7 @@
 }
 .wrapper{
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     background-color: var(--colorDark2);
     background-image: url(" https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
     background-repeat: no-repeat;
@@ -29,11 +29,11 @@ h1{
     color: var(--colorDark1);
 }
 .tab-cont{
-    max-width: 550px;
+    max-width: 400px;
     margin-left: 50%;
     transform: translateX(-50%);
     display: flex;
-    margin-top: 3.5rem;
+    margin-top: 1.7rem;
     padding: 0.2rem;
     align-items: center;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
@@ -58,7 +58,7 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-block: 4rem;
+    margin-block: 2.6rem;
 
 }
 .button{
@@ -141,7 +141,7 @@ h1{
 }
 
 .user-info{
-    /* display: none; */
+    display: none;
 }
 .user-info.active{
     display: flex;
@@ -160,6 +160,8 @@ h1{
     height: 90px;
     width: 90px;
 }
+
+
 .name p{
     font-size: 2rem;
     font-weight: 600;
@@ -170,8 +172,253 @@ h1{
     width: 30px;
 }
 
-
-.form-container.active{
-    opacity: 1;
-    scale: 1;
+.user-info p[data-temp]{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--colorDark1);
 }
+
+.para-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 2.5rem;
+    margin-top: 2rem; 
+}
+.param{
+    width: 35%;
+    max-width: 250px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 7px;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    gap: 5px 0;
+    border: 1px solid var(--colorDark2);
+    flex-direction: column;
+}
+.param p:first-of-type{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+
+}
+
+.form-container{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0 1rem;
+    margin-bottom: 2rem;
+}
+.form-container input{
+    all: unset;
+    width: calc(100% - 90px) ;
+    padding: 0 20px;
+    height: 40px;
+    background-color:  rgba(255, 255, 255, 0.4);
+    border-radius:20px ;
+    border:  2px solid var(--colorDark1);
+}
+.form-container input::placeholder{
+    color: #112D4E;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.form-container .btn{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--colorDark1);
+    border-radius: 50%;
+   
+}
+.form-container.active{
+    display: flex;
+}
+
+
+@media (min-width:390px) and (max-width:450px){
+    .wrapper{
+        height: 100vh;
+    
+    }
+    
+    .tab-cont{
+        max-width: 550px;
+        padding: 0.1rem;
+        }
+       
+    .tab{
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 6px 9px;
+            border-radius: 2rem;
+        }
+        .button{
+            font-size: 0.65rem;
+            padding: 9px 28px;
+            border-radius: 0.5rem;
+        }
+        .grant-location p:first-of-type{
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+           
+        
+        }
+        .grant-location p:last-of-type
+        {
+                font-size: 0.9rem;
+                font-weight: 500;
+                margin-top: 0.75rem;
+                margin-bottom: 1.75rem;
+        }
+        .user-info p{
+            font-size: 1.35rem;
+            font-weight: 600;
+        }
+        .user-info img{
+            height: 35px;
+            width: 35px;
+        }
+        
+
+        .name p{
+            font-size: 1.6rem;
+        }
+        .name img{
+            height: 21px;
+            width: 21px;
+        }
+        .user-info p[data-temp]{
+            font-size: 1.7rem;
+        }
+        .para-cont{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px 2.5rem;
+            margin-top: 2rem;       
+        }
+        .param{
+            width: 490px;
+            max-width: 50%;
+            padding: 2rem;
+            align-items: center;
+            display: flex;
+
+            flex-direction: column;
+        }
+        .param img{
+            height: 50px  ;
+            width: 50px;
+        }
+        .param p:first-of-type{
+            font-size: 1.2rem;
+        
+        }
+        .param p:last-of-type{
+            font-size: 1.3rem;
+        }
+        
+        
+    }
+    @media (min-width:320px) and (max-width:390px)
+    {
+        .wrapper{
+            height: 100vh;
+        
+        }
+        .tab-cont{
+            max-width: 550px;
+            padding: 0.1rem;
+            }
+            h1{
+                font-size: 1.4rem;
+            }
+           
+        .tab{
+                font-size: 0.7rem;
+                font-weight: 600;
+                padding: 6px 9px;
+                border-radius: 2rem;
+            }
+            .button{
+                font-size: 0.6rem;
+                padding: 9px 28px;
+                border-radius: 0.5rem;
+            }
+            .grant-location p:first-of-type{
+                font-size: 1.5rem;
+                font-weight: 600;
+                letter-spacing: 0.6px;
+               
+            
+            }
+            .grant-location p:last-of-type
+            {
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                    margin-top: 0.75rem;
+                    margin-bottom: 1.75rem;
+            }
+            .user-info p{
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+            .user-info img{
+                height: 30px;
+                width: 30px;
+            }
+            
+    
+            .name p{
+                font-size: 1.5rem;
+            }
+            .name img{
+                height: 30px;
+                width: 30px;
+            }
+            .user-info p[data-temp]{
+                font-size: 1.55rem;
+            }
+            .para-cont{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px 2.5rem;
+                margin-top: 2rem;       
+            }
+            .param{
+                width: 450px;
+                max-width: 50%;
+                padding: 2rem;
+                align-items: center;
+                display: flex;
+    
+                flex-direction: column;
+            }
+            .param img{
+                height: 50px  ;
+                width: 50px;
+            }
+            .param p:first-of-type{
+                font-size: 1.2rem;
+            
+            }
+            .param p:last-of-type{
+                font-size: 1.3rem;
+            }
+            
+
+    }
+
+

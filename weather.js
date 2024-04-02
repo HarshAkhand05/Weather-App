@@ -64,7 +64,8 @@ async function fetchuserweatherinfo(coordinates) {
         userinfo.classList.add("active");
         renderweatherinfo(data);
     } catch (error) {
-        loadingscreen.classList.remove("active")
+        loadingscreen.classList.remove("active");
+        userinfo.computedStyleMap.im
 
     }
 
@@ -145,6 +146,7 @@ async function fetchsearchweatherinfo(citynaam)
         const data = await response1.json();
         console.log("city",data);
         loadingscreen.classList.remove("active");
+        userinfo.classList.add("active");
         renderweatherinfo(data);
     } catch (err) {
         
