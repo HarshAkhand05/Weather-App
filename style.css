@@ -20,7 +20,7 @@
     object-fit: fill;
     background-position-x: right;
     background-clip: content-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 h1{
     text-align: center;
