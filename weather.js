@@ -86,7 +86,7 @@ function renderweatherinfo(weatherinfo) {
     country.src = `https://flagcdn.com/144x108/${weatherinfo?.sys?.country.toLowerCase()}.png`;
     citydisc.innerText = weatherinfo?.weather?.[0]?.description;
     weathericon.src = `http://openweathermap.org/img/w/${weatherinfo?.weather?.[0]?.icon}.png`
-    temp.innerText = `${weatherinfo?.main?.temp} °C`;
+    temp.innerText = `${weatherinfo?.main?.temp}°C`;
     windspeed.innerText =`${ weatherinfo?.wind?.speed}  m/s`;
     humidity.innerText = `${weatherinfo?.main?.humidity}%`;
     cloudinfo.innerText =`${ weatherinfo?.clouds?.all}%`;
